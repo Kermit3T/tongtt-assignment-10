@@ -32,9 +32,9 @@
             <div class="form-group">
                 <label for="query-type">Select query type:</label>
                 <select id="query-type">
+                    <option value="hybrid">Hybrid query</option>
                     <option value="image">Image query</option>
                     <option value="text">Text query</option>
-                    <option value="hybrid">Hybrid query</option>
                 </select>
             </div>
 
@@ -45,7 +45,12 @@
                 </label>
             </div>
 
-            <button onclick="performSearch()">Search</button>
+            <button id="search-button" onclick="performSearch()">Search</button>
+        </div>
+
+        <div id="loading" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching...</p>
         </div>
 
         <h2>Top Search Results</h2>
